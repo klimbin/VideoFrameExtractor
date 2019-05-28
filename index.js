@@ -9,10 +9,9 @@ inputElement.addEventListener('change', () => {
   frames = [];
   let fileList = inputElement.files;
   videoName = fileList[0].name.split('.')[0];
-  video.src = fileList[0].name;
+  video.src = URL.createObjectURL(fileList[0]);
   video.load();
 });
-
 
 const ctx = canvas.getContext('2d');
 // when the video is playing draw each frame to canvas

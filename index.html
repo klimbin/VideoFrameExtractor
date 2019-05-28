@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+
+    <title>MP4 to Image Converter</title>
+  </head>
+  <body>
+    <h2>MP4 to Image Converter</h2>
+    <p>Upload a video and play the section you want to extract frames from.</p>
+
+  	<input id="videoInput" type="file" accept=".mp4">
+    <br/><br/>
+
+    <video id="video" width="426" height="240" controls></video>
+    <br/>
+    <canvas id="canvas" width="426" height="240"></canvas>
+
+    <br/><br/>
+    <button onclick="downloadFrames()">Download Frames</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.0/jszip.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
